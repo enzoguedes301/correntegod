@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1c1917">
+  <title>Ajude o Seu Osvaldo a recomeçar — Corrente do Bem</title>
+  <meta name="description" content="O Seu Osvaldo perdeu o carrinho de cachorro-quente que sustentava a família. Ajude a reconstruir. Meta de R$ 100.000 em 30 dias.">
+
+  <!-- Miniatura ao compartilhar no WhatsApp (ajuste a URL depois de publicar) -->
+  <meta property="og:title" content="Ajude o Seu Osvaldo a recomeçar">
+  <meta property="og:description" content="Ele perdeu o carrinho de cachorro-quente que sustentava a família inteira. Qualquer valor ajuda a reconstruir.">
+  <meta property="og:image" content="imagens/capa.jpg">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ==========================================================
+     CABEÇALHO COM LOGO
+     ========================================================== -->
+<header class="cabecalho">
+  <div class="cabecalho-conteudo">
+    <!-- Logo -->
+    <img src="imagens/logo.png" alt="Logo da Corrente do Bem" class="logo"
+         onerror="this.closest('.cabecalho').classList.add('sem-logo')">
+    <!-- Texto ao lado da logo -->
+    <p class="cabecalho-texto">Ser Cristão de Verdade é ajudar quem precisa</p>
+  </div>
+</header>
+
+<!-- ==========================================================
+     1. ABERTURA — foto do Seu Osvaldo como fundo
+     ========================================================== -->
+<section class="abertura">
+  <div class="abertura-foto">
+    <!-- Foto do Seu Osvaldo - Abraço Solidário como fundo -->
+    <img src="imagens/Abraço Solidário no Carrinho de Lanches.png" alt="Seu Osvaldo no carrinho"
+         onerror="this.closest('.abertura-foto').classList.add('sem-imagem')">
+  </div>
+
+  <div class="abertura-conteudo">
+    <p class="selo">Campanha solidária · 30 dias</p>
+
+    <h1>Vamos reconstruir o carrinho do <span class="destaque">Seu Osvaldo</span></h1>
+
+    <p class="abertura-frase">
+      Ele perdeu o carrinho de cachorro-quente que sustentava a família inteira e está desesperado. Com a sua ajuda, ele volta a viver com dignidade.
+    </p>
+
+    <div class="abertura-seta" aria-hidden="true">
+      <span>conheça a história</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     2. PAINEL — barra de doações + cronômetro
+     ========================================================== -->
+<section class="painel">
+  <div class="painel-card">
+
+    <div class="progresso-topo">
+      <div>
+        <span class="valor-grande" id="valor-arrecadado">R$ 0</span>
+        <span class="valor-meta">de <strong id="valor-meta">R$ 100.000</strong></span>
+      </div>
+      <div class="progresso-pct" id="progresso-pct">0%</div>
+    </div>
+
+    <div class="barra" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progresso da arrecadação">
+      <div class="barra-preenchida" id="barra-preenchida">
+        <span class="barra-brilho"></span>
+      </div>
+      <span class="marco" style="left:25%"></span>
+      <span class="marco" style="left:50%"></span>
+      <span class="marco" style="left:75%"></span>
+    </div>
+
+    <div class="progresso-rodape">
+      <span><strong id="num-doadores">0</strong> já doaram</span>
+      <span>Faltam <strong id="valor-faltante">R$ 100.000</strong></span>
+    </div>
+
+    <div class="cronometro-bloco">
+      <p class="cronometro-titulo">Tempo restante</p>
+      <div class="cronometro" id="cronometro">
+        <div class="relogio-item"><span class="relogio-num" id="cd-dias">30</span><span class="relogio-rotulo">dias</span></div>
+        <div class="relogio-item"><span class="relogio-num" id="cd-horas">00</span><span class="relogio-rotulo">horas</span></div>
+        <div class="relogio-item"><span class="relogio-num" id="cd-min">00</span><span class="relogio-rotulo">min</span></div>
+        <div class="relogio-item"><span class="relogio-num" id="cd-seg">00</span><span class="relogio-rotulo">seg</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================================
+     3. A HISTÓRIA
+     ========================================================== -->
+<section class="secao" id="historia">
+  <h2>Conheça a história do Seu Osvaldo</h2>
+
+  <div class="texto">
+    <p>
+      Seu Osvaldo é um vendedor humilde de cachorro-quente, conhecido pelo seu carrinho, o <strong>Dogão do Osvaldo</strong>. Um homem simples, trabalhador e dedicado à família.
+    </p>
+    <p>
+      Durante uma manifestação política, Osvaldo é humilhado e hostilizado por estar usando uma camiseta e bandeiras do Brasil. Seu carrinho é destruído e suas mercadorias são roubadas, deixando-o sem sua única fonte de renda.
+    </p>
+    <p>
+      A situação é ainda mais delicada: sua esposa enfrenta uma doença crônica e sua filha sonha em cursar Medicina. Com as contas chegando e sem condições de trabalhar, ele não sabe como sustentar sua família.
+    </p>
+    <p>
+      Seu Osvaldo só deseja uma oportunidade de recomeçar, reconstruir seu carrinho e voltar a trabalhar com dignidade.
+    </p>
+    <p>
+      <strong>Qualquer valor ajuda — e compartilhar esta página ajuda tanto quanto doar.</strong>
+    </p>
+  </div>
+
+  <!-- Aviso de preservação de identidade — honestidade com quem doa -->
+  <aside class="aviso-nome">
+    <strong>Sobre o nome:</strong> por segurança da família, preservamos o nome
+    verdadeiro e usamos "Seu Osvaldo" nesta página. A campanha é organizada por
+    <strong>Marina Silva Santos</strong>, que responde pela chave PIX e
+    publica a prestação de contas na seção de transparência.
+  </aside>
+
+  <!-- Destino das doações -->
+  <div class="destino">
+    <h3>Para onde vai cada real</h3>
+    <ul class="lista-destino">
+      <li><span>Carrinho novo e equipamentos</span><span class="destino-valor">R$ 18.000</span></li>
+      <li><span>Estoque inicial de mercadoria</span><span class="destino-valor">R$ 8.500</span></li>
+      <li><span>Medicação da esposa (12 meses)</span><span class="destino-valor">R$ 12.000</span></li>
+      <li><span>Contas atrasadas da casa</span><span class="destino-valor">R$ 7.500</span></li>
+      <li><span>Cursinho e material da filha</span><span class="destino-valor">R$ 4.000</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==========================================================
+     4. GALERIA
+     ========================================================== -->
+<section class="secao secao-clara" id="galeria">
+  <h2>O Dogão do Osvaldo</h2>
+  <p class="secao-sub">Deslize para o lado para ver todas</p>
+
+  <div class="carrossel" id="carrossel">
+    <figure class="foto" data-legenda="O carrinho destruído pela manifestação">
+      <img src="imagens/Carrinho de Cachorro-Quente na Chuva.png" alt="O carrinho de cachorro-quente destruído" loading="lazy">
+      <figcaption>O carrinho destruído pela manifestação</figcaption>
+    </figure>
+    <figure class="foto" data-legenda="Marina, esposa de Osvaldo, portadora de artrite psoriásica">
+      <img src="imagens/donate1.png" alt="Marina, esposa de Osvaldo" loading="lazy">
+      <figcaption>Marina, esposa de Osvaldo, portadora de artrite psoriásica</figcaption>
+    </figure>
+    <figure class="foto" data-legenda="A vida que precisa de ajuda para recomeçar">
+      <img src="imagens/donate2.png" alt="Seu Osvaldo e sua família" loading="lazy">
+      <figcaption>A vida que precisa de ajuda para recomeçar</figcaption>
+    </figure>
+    <figure class="foto" data-legenda="Esperança de um novo começo">
+      <img src="imagens/donate4.png" alt="Seu Osvaldo com esperança no futuro" loading="lazy">
+      <figcaption>Esperança de um novo começo</figcaption>
+    </figure>
+    <figure class="foto" data-legenda="Abraço solidário na comunidade">
+      <img src="imagens/Abraço Solidário no Carrinho de Lanches.png" alt="Abraço solidário no carrinho de lanches" loading="lazy">
+      <figcaption>Abraço solidário na comunidade</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ==========================================================
+     5. DOAÇÃO — valores de R$ 50 a R$ 500
+     ========================================================== -->
+<section class="secao secao-doar" id="doar">
+  <h2>Escolha o valor da sua doação</h2>
+  <p class="secao-sub">Cada doação aproxima o Seu Osvaldo de voltar a trabalhar.</p>
+
+  <div class="valores" id="valores" role="group" aria-label="Valores de doação"></div>
+
+  <div class="valor-livre">
+    <label for="valor-outro">Ou digite outro valor</label>
+    <div class="campo-moeda">
+      <span>R$</span>
+      <input type="number" id="valor-outro" min="1" step="1" placeholder="0" inputmode="numeric">
+    </div>
+  </div>
+
+  <div class="resumo">
+    <p class="resumo-rotulo">Você vai doar</p>
+    <p class="resumo-valor" id="resumo-valor">R$ 100</p>
+    <p class="resumo-impacto" id="resumo-impacto"></p>
+  </div>
+
+  <button class="btn btn-largo btn-grande" id="btn-doar">Quero Ajudar</button>
+  <button class="link-discreto-grande" id="btn-depois-grande">Contribuir com Osvaldo outro dia</button>
+</section>
+
+<!-- ==========================================================
+     6. TRANSPARÊNCIA
+     ========================================================== -->
+<section class="secao" id="transparencia">
+  <h2>Transparência</h2>
+  <p class="secao-sub">Prestação de contas atualizada ao longo da campanha.</p>
+
+  <ol class="atualizacoes">
+    <!-- TROCAR: adicione uma entrada a cada novidade, a mais recente no topo.
+         Fotos de recibos e do carrinho sendo montado valem mais que qualquer texto. -->
+    <li>
+      <span class="atualizacao-data">25/11/2026</span>
+      <h3>Compras planejadas</h3>
+      <p>Assim que arrecadarmos os fundos necessários, iniciaremos as compras do carrinho novo e equipamentos. Os comprovantes de cada compra serão compartilhados aqui para garantir transparência total com todos os doadores.</p>
+    </li>
+    <li>
+      <span class="atualizacao-data">15/11/2026</span>
+      <h3>Campanha iniciada</h3>
+      <p>
+        Começamos a corrente do bem com a meta de R$ 100.000 em 30 dias para
+        reconstruir o carrinho do Seu Osvaldo e dar fôlego à família enquanto
+        ele não volta a trabalhar.
+      </p>
+    </li>
+  </ol>
+
+  <!-- Documentação que comprova o caso -->
+  <div class="destino">
+    <h3>Documentos do caso</h3>
+    <p class="secao-sub" style="margin-bottom:1em">
+      <!-- TROCAR: liste o que você tem. Se não tiver algum item, apague a linha —
+           não prometa documento que não existe. -->
+      Quem quiser conferir pode solicitar pelo contato no rodapé:
+    </p>
+    <ul class="lista-destino">
+      <li><span>Boletim de ocorrência</span><span class="destino-valor">nº 452/2026</span></li>
+      <li><span>Fotos do carrinho destruído</span><span class="destino-valor">disponível</span></li>
+      <li><span>Laudo médico da esposa</span><span class="destino-valor">sob sigilo</span></li>
+      <li><span>Orçamento do carrinho novo</span><span class="destino-valor">disponível</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer class="rodape">
+  <p><strong>Corrente do Bem</strong> · Organizada por <strong>Marina Silva Santos</strong></p>
+  <p><strong>Email:</strong> contato@correntedobem.com.br · <strong>WhatsApp:</strong> (11) 98765-4321</p>
+  <p style="font-size: 0.8rem; margin-top: 12px; color: rgba(255, 255, 255, .5);">CPF: 123.456.789-00 · Chave PIX: (11) 98765-4321</p>
+</footer>
+
+<!-- Espaço para a barra fixa não cobrir o rodapé -->
+<div class="espaco-barra"></div>
+
+
+<!-- ==========================================================
+     BARRA FIXA — sempre visível no rodapé do celular
+     ========================================================== -->
+<div class="barra-fixa" id="barra-fixa">
+  <div class="barra-fixa-info">
+    <span class="barra-fixa-valor" id="barra-fixa-valor">R$ 0</span>
+    <span class="barra-fixa-meta" id="barra-fixa-meta">de R$ 100.000</span>
+  </div>
+  <button class="btn" id="btn-barra-fixa">Quero Ajudar</button>
+</div>
+
+
+<!-- ==========================================================
+     POP-UP DE DOAÇÃO — 3 passos
+     Passo 1: valor · Passo 2: nome e telefone · Passo 3: PIX
+     ========================================================== -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-fundo" id="modal-fundo"></div>
+
+  <div class="modal-caixa" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+    <button class="modal-fechar" id="modal-fechar" aria-label="Fechar">×</button>
+
+    <!-- Indicador de progresso -->
+    <div class="passos" aria-hidden="true">
+      <span class="passo-ponto ativo" data-passo="1"></span>
+      <span class="passo-ponto" data-passo="2"></span>
+      <span class="passo-ponto" data-passo="3"></span>
+    </div>
+
+    <!-- ---------- PASSO 1: escolher o valor ---------- -->
+    <div class="passo" data-conteudo="1">
+      <h2 id="modal-titulo">Ajude o Seu Osvaldo a recomeçar</h2>
+      <p class="modal-sub">Escolha quanto você quer doar</p>
+
+      <div class="valores valores-modal" id="valores-modal" role="group" aria-label="Valores de doação"></div>
+
+      <div class="valor-livre">
+        <label for="valor-outro-modal">Outro valor</label>
+        <div class="campo-moeda">
+          <span>R$</span>
+          <input type="number" id="valor-outro-modal" min="1" step="1" placeholder="0" inputmode="numeric">
+        </div>
+      </div>
+
+      <p class="modal-impacto" id="modal-impacto"></p>
+
+      <button class="btn btn-largo btn-grande" id="btn-passo1">Continuar</button>
+      <button class="link-discreto" id="btn-depois">Quero ler a história primeiro</button>
+    </div>
+
+    <!-- ---------- PASSO 2: nome e telefone ---------- -->
+    <div class="passo" data-conteudo="2" hidden>
+      <h2>Quase lá!</h2>
+      <p class="modal-sub">
+        Deixe seu contato para registrarmos sua doação de
+        <strong id="modal-valor-eco">R$ 100</strong> e te enviarmos a prestação de contas.
+      </p>
+
+      <form id="form-lead" novalidate>
+        <div class="campo">
+          <label for="lead-nome">Seu nome</label>
+          <input type="text" id="lead-nome" name="nome" autocomplete="name"
+                 placeholder="Como podemos te chamar?" required>
+          <span class="erro" id="erro-nome"></span>
+        </div>
+
+        <div class="campo">
+          <label for="lead-telefone">WhatsApp</label>
+          <input type="tel" id="lead-telefone" name="telefone" autocomplete="tel"
+                 placeholder="(00) 00000-0000" inputmode="tel" maxlength="15" required>
+          <span class="erro" id="erro-telefone"></span>
+        </div>
+
+        <div class="campo">
+          <label for="lead-email">E-mail</label>
+          <input type="email" id="lead-email" name="email" autocomplete="email"
+                 placeholder="seu@email.com" required>
+          <span class="erro" id="erro-email"></span>
+        </div>
+
+        <label class="checkbox">
+          <input type="checkbox" id="lead-anonimo">
+          <span>Prefiro que minha doação seja anônima</span>
+        </label>
+
+        <button type="submit" class="btn btn-largo btn-grande">Ver dados do PIX</button>
+        <button type="button" class="link-discreto" id="btn-voltar2">Voltar</button>
+      </form>
+
+      <p class="nota-privacidade">
+        Usamos seu contato apenas para confirmar a doação e enviar notícias da
+        campanha. Não compartilhamos com ninguém.
+      </p>
+    </div>
+
+    <!-- ---------- PASSO 3: PIX ---------- -->
+    <div class="passo" data-conteudo="3" hidden>
+      <div class="confirmacao">
+        <div class="confirmacao-icone" aria-hidden="true">♥</div>
+        <h2>Obrigado, <span id="modal-nome-eco">amigo</span>!</h2>
+        <p class="modal-sub">Faça o PIX de <strong id="modal-valor-eco2">R$ 100</strong> para concluir.</p>
+      </div>
+
+      <div class="pix-caixa" id="pix-caixa">
+        <p id="pix-carregando">Gerando seu QR Code PIX...</p>
+
+        <div class="pix-qr" id="pix-qr" hidden>
+          <img src="" alt="QR Code do PIX" id="pix-qr-img"
+               onerror="this.closest('#pix-qr').classList.add('sem-qr')">
+          <p class="qr-aviso">QR Code indisponível no momento — use o código copia-e-cola abaixo.</p>
+        </div>
+
+        <div id="pix-dados" hidden>
+          <p class="pix-rotulo">PIX copia e cola</p>
+          <div class="pix-chave">
+            <code id="pix-chave"></code>
+          </div>
+          <button class="btn btn-largo" id="btn-copiar-pix">Copiar código PIX</button>
+        </div>
+
+        <p id="pix-erro" class="erro visivel" hidden>
+          Não conseguimos gerar o PIX agora. Tente novamente em instantes ou chame no WhatsApp abaixo.
+        </p>
+      </div>
+
+      <!-- TROCAR o número no js/campanha.js (CONFIG.whatsapp) -->
+      <a class="btn btn-whatsapp btn-largo" id="btn-whatsapp" href="#" target="_blank" rel="noopener">
+        Enviar comprovante no WhatsApp
+      </a>
+
+      <button class="link-discreto" id="btn-fechar3">Fechar</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- Lightbox das fotos -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox-fechar" id="lightbox-fechar" aria-label="Fechar">×</button>
+  <img src="" alt="" id="lightbox-img">
+  <p class="lightbox-legenda" id="lightbox-legenda"></p>
+</div>
+
+<!-- Aviso flutuante -->
+<div class="toast" id="toast" hidden></div>
+
+<script src="js/campanha.js"></script>
+</body>
+</html>

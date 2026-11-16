@@ -1,0 +1,33 @@
+{
+  "name": "correntedobem-webhook",
+  "version": "1.0.0",
+  "description": "Webhook para processar pagamentos ZuckPay - Corrente do Bem",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "zuckpay",
+    "webhook",
+    "pix",
+    "doacao"
+  ],
+  "author": "Enzo Guedes",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.2",
+    "google-spreadsheet": "^4.1.0",
+    "nodemailer": "^6.9.7",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": "26.x"
+  }
+}

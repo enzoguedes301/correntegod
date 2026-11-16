@@ -1,0 +1,69 @@
+╔════════════════════════════════════════════════════════════════╗
+║          🚀 CORRENTE DO BEM — PRONTO PARA UPLOAD 🚀          ║
+╚════════════════════════════════════════════════════════════════╝
+
+✅ PROJETO 100% COMPLETO
+
+📋 CONTEÚDO PRONTO:
+  • Logo verde no cabeçalho
+  • Texto: "Ser Cristão de Verdade é ajudar quem precisa"
+  • Foto de Osvaldo (Abraço Solidário) como fundo
+  • 5 fotos na galeria
+  • Barra animada: R$ 2.237,50 de R$ 100.000
+  • 38 doadores
+  • Boletim: nº 452/2026
+  • Design verde claro (Vakinha)
+  • Modal com 3 passos
+  • Botões: "Quero Ajudar" + "Contribuir outro dia"
+
+📁 ARQUIVOS:
+  • index.html (página principal)
+  • css/estilo.css (estilos)
+  • js/campanha.js (funcionalidades)
+  • imagens/ (6 imagens carregadas)
+
+🎨 DESIGN:
+  • Fonte: Poppins (títulos) + Inter (texto)
+  • Cores: Verde claro (Vakinha)
+  • Responsivo: Mobile + Desktop
+
+⚠️  ANTES DE PUBLICAR (3 PASSOS):
+
+1️⃣  TROCAR DADOS REAIS
+   • Nome completo
+   • Email
+   • WhatsApp/Telefone
+   • Chave PIX real
+   
+   Locais: index.html (rodapé) + js/campanha.js
+
+2️⃣  ADICIONAR QR CODE
+   • Colocar em: imagens/qrcode-pix.png
+   
+3️⃣  CONFIGURAR RECEBIMENTO DE LEADS
+   • Descomente em: js/campanha.js (linha 426)
+   • Configure: Google Forms, Formspree, ou planilha
+
+🌐 COMO PUBLICAR (Escolha uma):
+
+GitHub Pages:  https://github.com/novo-repo
+Vercel:        https://vercel.com
+Netlify:       https://netlify.com
+FTP:           Bluehost, SiteGround, Hostinger
+
+📖 DOCUMENTAÇÃO:
+  • README-DEPLOY.md .............. Guia principal
+  • DEPLOY-CHECKLIST.md ........... Checklist completo
+  • DADOS-A-TROCAR.md ............. Dados fictícios
+
+🧪 TESTE LOCAL:
+  python -m http.server 8000
+  Abrir: http://localhost:8000
+
+═══════════════════════════════════════════════════════════════
+
+                    ✨ TUDO PRONTO! ✨
+              Escolha uma opção de upload acima
+                    E publique agora! 🚀
+
+═══════════════════════════════════════════════════════════════

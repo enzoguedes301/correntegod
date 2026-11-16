@@ -1,0 +1,47 @@
+FOTOS DA CAMPANHA — SEU OSVALDO
+================================
+
+Coloque os arquivos nesta pasta com exatamente estes nomes:
+
+  capa.jpg      Tela de abertura — a foto mais importante do site.
+                VERTICAL ou quadrada (o celular e vertical).
+                Ideal: Seu Osvaldo junto ao carrinho, rosto visivel.
+                1200x1500 ou maior.
+
+  foto1.jpg     Seu Osvaldo trabalhando no ponto
+  foto2.jpg     O CARRINHO DESTRUIDO  <- a prova visual da campanha
+  foto3.jpg     A familia
+  foto4.jpg     (livre - orcamento do carrinho novo, o ponto vazio...)
+                Todas em 4:5 vertical, 1000x1250
+
+  qrcode-pix.png   QR Code do PIX (print do app do banco), quadrado
+
+
+A FOTO QUE MAIS IMPORTA
+-----------------------
+A foto2.jpg (carrinho destruido) e o que sustenta a credibilidade
+da campanha. Uma foto nitida do estrago convence mais que qualquer
+paragrafo de texto. Se tiver varias, use a mais clara.
+
+
+CUIDADO COM O ROSTO DA FAMILIA
+------------------------------
+O nome foi preservado por seguranca. Se as fotos mostram rostos
+reconheciveis, isso anula a protecao do nome. Considere:
+  - fotos de costas ou de perfil
+  - foco nas maos, no carrinho, nos utensilios
+  - rostos desfocados (qualquer editor de celular faz)
+
+Decida isso com a familia antes de publicar.
+
+
+DICAS
+-----
+- Comprima antes de subir: squoosh.app ou tinypng.com
+  Foto de celular tem varios MB e trava no 4G.
+- Enquanto um arquivo nao existe, aparece um espaco reservado
+  em vez de imagem quebrada. Da para ir preenchendo aos poucos.
+- Para mais ou menos de 4 fotos, copie ou apague um bloco
+  <figure class="foto"> na galeria do index.html.
+
+Depois de colocar as fotos, apague este arquivo.
