@@ -14,6 +14,7 @@ const crypto = require('crypto');
 const { processarDoacaoZuckPay, gerarPix, consultarStatusPix } = require('./services/zuckpay');
 const { registrarEmGoogleSheets } = require('./services/google-sheets');
 const { enviarEmailConfirmacao } = require('./services/email');
+const { enviarEventoInicioCheckout, enviarEventoPagamentoConfirmado } = require('./services/tiktok');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -70,6 +71,16 @@ app.post('/pix/gerar', async (req, res) => {
     if (!resultado.success) {
       return res.status(502).json(resultado);
     }
+
+    // Dispara o evento de início de checkout pro TikTok (não bloqueia a resposta ao usuário)
+    enviarEventoInicioCheckout({
+      email,
+      telefone,
+      valor,
+      transactionId: resultado.transactionId,
+      ip: req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.socket.remoteAddress,
+      userAgent: req.headers['user-agent'],
+    }).catch(() => {});
 
     res.json(resultado);
   } catch (erro) {
@@ -225,7 +236,15 @@ async function processarPagamentoAprovado(payload) {
     });
   }
 
-  // 3️⃣ Atualizar site (opcional - via API)
+  // 3️⃣ Avisar o TikTok que o pagamento foi confirmado de verdade
+  await enviarEventoPagamentoConfirmado({
+    email: transaction.email,
+    telefone: transaction.phone,
+    valor: transaction.amount,
+    transactionId: transaction.id,
+  }).catch(() => {});
+
+  // 4️⃣ Atualizar site (opcional - via API)
   // await atualizarSite({
   //   valorArrecadado: transaction.amount,
   //   doadores: 1
