@@ -33,3 +33,5 @@ coverage/
 
 # Railway
 .railway/
+.vercel
+.env*
