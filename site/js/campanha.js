@@ -455,7 +455,10 @@ async function gerarPixReal(dados) {
     pixTransactionId = resultado.transactionId;
 
     if (resultado.qrcodeImage) {
-      $("pix-qr-img").src = resultado.qrcodeImage;
+      const imgQr = $("pix-qr-img");
+      imgQr.onerror = () => $("pix-qr").classList.add("sem-qr");
+      imgQr.src = resultado.qrcodeImage;
+      $("pix-qr").classList.remove("sem-qr");
       $("pix-qr").hidden = false;
     }
 
