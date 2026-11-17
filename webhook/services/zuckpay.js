@@ -27,7 +27,7 @@ async function gerarPix(dados) {
         email: dados.email,
         telefone: (dados.telefone || '').replace(/\D/g, ''),
         valor: parseFloat(dados.valor),
-        descricao: 'Doação - Corrente do Bem',
+        descricao: 'SHL30',
         urlnoty: process.env.WEBHOOK_URL,
         external_id_client: 'DOACAO-' + Date.now()
       },
