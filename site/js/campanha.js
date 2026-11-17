@@ -349,6 +349,7 @@ function montarModal() {
 
 function montarFormulario() {
   const campoTelefone = $("lead-telefone");
+  const campoCpf = $("lead-cpf");
 
   // Vai formatando o telefone enquanto a pessoa digita
   campoTelefone.addEventListener("input", (e) => {
@@ -361,12 +362,23 @@ function montarFormulario() {
     e.target.value = saida;
   });
 
+  // Vai formatando o CPF enquanto a pessoa digita
+  campoCpf.addEventListener("input", (e) => {
+    const n = e.target.value.replace(/\D/g, "").slice(0, 11);
+    let saida = n;
+    if (n.length > 9)       saida = `${n.slice(0,3)}.${n.slice(3,6)}.${n.slice(6,9)}-${n.slice(9)}`;
+    else if (n.length > 6)  saida = `${n.slice(0,3)}.${n.slice(3,6)}.${n.slice(6)}`;
+    else if (n.length > 3)  saida = `${n.slice(0,3)}.${n.slice(3)}`;
+    e.target.value = saida;
+  });
+
   $("form-lead").addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const nome = $("lead-nome").value.trim();
     const telefone = campoTelefone.value.replace(/\D/g, "");
     const email = $("lead-email").value.trim();
+    const cpf = campoCpf.value.replace(/\D/g, "");
     let valido = true;
 
     if (nome.length < 2) {
@@ -384,12 +396,18 @@ function montarFormulario() {
       valido = false;
     } else limparErro("email");
 
+    if (cpf.length !== 11) {
+      mostrarErro("cpf", "Digite um CPF válido (11 dígitos).");
+      valido = false;
+    } else limparErro("cpf");
+
     if (!valido) return;
 
     const lead = {
       nome,
       telefone: campoTelefone.value,
       email,
+      cpf,
       valor: valorEscolhido,
       anonimo: $("lead-anonimo").checked,
       data: new Date().toISOString(),
@@ -407,7 +425,7 @@ function montarFormulario() {
     $("btn-whatsapp").href = `https://wa.me/${CONFIG.whatsapp}?text=${msg}`;
 
     irParaPasso(3);
-    gerarPixReal({ nome, email, telefone, valor: valorEscolhido });
+    gerarPixReal({ nome, email, telefone, cpf, valor: valorEscolhido });
   });
 }
 
